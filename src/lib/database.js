@@ -37,7 +37,7 @@ database._init = function (params) {
   };
 
   const spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
-  database._sheet = spreadsheet.getSheetByName(params['table_name']);
+  database._sheet = spreadsheet.getSheetByName(params['table']);
   if (!database._sheet) {
     throw Error('No table exists.')
   }

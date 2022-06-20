@@ -15,7 +15,7 @@ webapi.post = (e) => {
 
 webapi._parseFields = (e) => {
     let fields = {
-        'table_name': '',
+        'table': '',
         'method': 'select',
         'url_params': {},
         'payload': {}
@@ -23,8 +23,8 @@ webapi._parseFields = (e) => {
 
     for (let key in e.parameter) {
         switch (key) {
-            case 'table_name':
-                fields['table_name'] = e.parameter['table_name'];
+            case 'table':
+                fields['table'] = e.parameter['table'];
                 break;
             case 'method':
                 fields['method'] = e.parameter['method'].toLowerCase();
