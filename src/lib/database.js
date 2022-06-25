@@ -5,7 +5,7 @@ database.query = (params) => {
     status_code: 200,
     message: 'OK'
   };
-  let lock = LockService.getScriptLock();
+  let lock = LockService.getDocumentLock();
   let lock_timeout_ms = 30000;
 
   try {
