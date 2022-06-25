@@ -1,4 +1,4 @@
-const database = {};
+let database = {};
 
 database.query = (params) => {
   let resp = {
